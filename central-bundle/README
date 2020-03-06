@@ -1,0 +1,21 @@
+To deploy:
+  - If you need to add additional trusted CAs, run central/scripts/ca-setup.sh.
+
+  - Deploy Monitoring
+    - Run monitoring/scripts/setup.sh
+    - Run oc create -R -f monitoring
+  - Deploy Central
+    - Run central/scripts/setup.sh
+    - Run oc create -R -f central
+
+  
+  
+  - Deploy Scanner 
+     If you want to run the StackRox scanner:
+     - Run scanner/scripts/setup.sh
+     - Run oc create -R -f scanner
+
+
+For administrator login, select the "Login with username/password" option on
+the login page, and log in with username "admin" and the password found in the
+"password" file located in the same directory as this README.

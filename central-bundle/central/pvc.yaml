@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: stackrox-db
+  namespace: stackrox
+  labels:
+    app.kubernetes.io/name: stackrox
+spec:
+  
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi

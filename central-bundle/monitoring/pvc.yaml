@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: monitoring-db
+  namespace: stackrox
+  labels:
+    app.kubernetes.io/name: stackrox
+spec:
+  
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi

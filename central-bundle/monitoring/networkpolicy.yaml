@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-ext-to-monitoring
+  namespace: stackrox
+  labels:
+    app.kubernetes.io/name: stackrox
+spec:
+  ingress:
+  - ports:
+    - port: 443
+      protocol: TCP
+    - port: 8443
+      protocol: TCP
+  podSelector:
+    matchLabels:
+      app: monitoring
+  policyTypes:
+  - Ingress
