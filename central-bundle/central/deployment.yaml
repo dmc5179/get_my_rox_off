@@ -57,7 +57,7 @@ spec:
         runAsUser: 4000
       containers:
       - name: central
-        image: 10.3.84.210:5000/stackrox/main:3.0.36.0
+        image: 10.3.62.83:5000/stackrox/main:3.0.36.0
         command:
           - /stackrox/central-entrypoint.sh
         ports:
@@ -82,7 +82,7 @@ spec:
           readOnlyRootFilesystem: true
         env:
           - name: ROX_OFFLINE_MODE
-            value: "false"
+            value: "true"
           
         volumeMounts:
         - name: varlog
@@ -126,7 +126,7 @@ spec:
           readOnly: true
       
       - name: telegraf
-        image: 10.3.84.210:5000/stackrox/main:3.0.36.0
+        image: 10.3.62.83:5000/stackrox/main:3.0.36.0
         command:
           - /telegraf
         env:

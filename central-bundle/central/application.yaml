@@ -74,7 +74,7 @@ spec:
     - name: StackRox admin username
       value: "admin"
     - name: StackRox admin password
-      value: "P@ssw0rd"
+      value: "p@ssw0rd"
 
   selector:
     matchLabels:

@@ -50,7 +50,7 @@ spec:
       serviceAccount: monitoring
       containers:
       - name: influxdb
-        image: 10.3.84.210:5000/stackrox/monitoring:3.0.36.0
+        image: 10.3.62.83:5000/stackrox/monitoring:3.0.36.0
         lifecycle:
           postStart:
             exec:
@@ -76,7 +76,7 @@ spec:
           - name: monitoring-db
             mountPath: /var/lib/influxdb
       - name: telegraf-proxy
-        image: 10.3.84.210:5000/stackrox/monitoring:3.0.36.0
+        image: 10.3.62.83:5000/stackrox/monitoring:3.0.36.0
         command:
         - /telegraf
         ports:
@@ -101,7 +101,7 @@ spec:
             mountPath: /etc/telegraf
             readOnly: true
       - name: grafana
-        image: 10.3.84.210:5000/stackrox/monitoring:3.0.36.0
+        image: 10.3.62.83:5000/stackrox/monitoring:3.0.36.0
         command:
         - /grafana-entrypoint.sh
         - /run.sh

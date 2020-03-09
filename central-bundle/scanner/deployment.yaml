@@ -51,7 +51,7 @@ spec:
                     - "true"
       containers:
       - name: scanner
-        image: 10.3.84.210:5000/stackrox/scanner:2.0.2
+        image: 10.3.62.83:5000/stackrox/scanner:2.0.2
         resources:
           requests:
             memory: "2500Mi"
@@ -92,7 +92,7 @@ spec:
           mountPath: /run/secrets/stackrox.io/proxy-config/
           readOnly: true
       - name: db
-        image: 10.3.84.210:5000/stackrox/scanner-db:2.0.2
+        image: 10.3.62.83:5000/stackrox/scanner-db:2.0.2
         resources:
           limits:
             cpu: 2
